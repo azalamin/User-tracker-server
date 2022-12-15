@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const uri = `mongodb+srv://usertracker:${process.env.DB_PASS}@cluster0.2jfkpef.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_DB_USER}:${process.env.DB_PASS}@cluster0.2jfkpef.mongodb.net/?retryWrites=true&w=majority`;
 // const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.ordcu.mongodb.net/?retryWrites=true&w=majority`;
 
 const client = new MongoClient(uri, {
